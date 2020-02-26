@@ -28,6 +28,11 @@ public class Exercicio02 {
 
     private static double calculaOrcamentoAnual(List<Funcionario> funcionarios) {
         // TODO: implemente o código deste método
-        return 0.0;
+        double total = 0;
+
+        for (Funcionario funcionario: funcionarios) {
+            total =+ funcionario.retornarSalarioAnual();
+        }
+        return total;
     }
 }

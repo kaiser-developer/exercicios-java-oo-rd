@@ -1,5 +1,6 @@
 package exercicio01;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -10,6 +11,7 @@ public class Exercicio01 {
         int tamanho = 10;
 
         int[] fibonacci = new Fibonacci().getSequenciaFibonacciDe(tamanho);
+        System.out.println(getSetDe(fibonacci));
 
         Set<Integer> primos = new NumeroPrimo().getNumerosPrimosDe(getSetDe(fibonacci));
 
@@ -28,6 +30,11 @@ public class Exercicio01 {
      */
     private static Set<Integer> getSetDe(int[] numeros) {
         // TODO: implemente o código deste método
-        return null;
+        Set<Integer> inteiros = new HashSet<>();
+            for (int i = 0; i < numeros.length; i++){
+                inteiros.add(numeros[i]);
+            }
+
+        return inteiros;
     }
 }
